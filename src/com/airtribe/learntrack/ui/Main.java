@@ -238,7 +238,6 @@ public class Main {
     }
 
     private static void deactivateCourse() {
-
         System.out.print("Enter course ID: ");
         int id = Integer.parseInt(scn.nextLine());
         try {
