@@ -9,7 +9,7 @@ public class Course {
     private boolean active;
 
     //Parameterized Constructor
-    Course(int id, String courseName, String description, int durationInWeeks, boolean active){
+    public Course(int id, String courseName, String description, int durationInWeeks, boolean active){
         this.id = id;
         this.courseName = courseName;
         this.description = description;
@@ -43,5 +43,16 @@ public class Course {
 
     public void setActive(boolean active){
         this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", courseName='" + courseName + '\'' +
+                ", description='" + description + '\'' +
+                ", durationInWeeks=" + durationInWeeks +
+                ", active=" + active +
+                '}';
     }
 }

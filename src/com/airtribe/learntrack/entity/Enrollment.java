@@ -9,7 +9,7 @@ public class Enrollment {
     private String status;
 
     //Parameterized Constructor
-    Enrollment(int id, int studentId, int courseId, String enrollmentDate, String status){
+    public Enrollment(int id, int studentId, int courseId, String enrollmentDate, String status){
         this.id = id;
         this.studentId = studentId;
         this.courseId = courseId;

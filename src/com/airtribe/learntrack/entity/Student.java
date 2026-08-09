@@ -39,4 +39,16 @@ public class Student extends Person{
         return "Student: " + firstName + " " + lastName;
     }
 
+    // toString method
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", batch='" + batch + '\'' +
+                ", active=" + active +
+                '}';
+    }
 }

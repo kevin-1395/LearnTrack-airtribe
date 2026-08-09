@@ -4,14 +4,22 @@ public class IdGenerator {
 
     // static variable and Methods declaration
 
-    private static int studentCounter;
-    private static int courseCounter;
+    private static int studentIdCounter = 1;
+    private static int courseIdCounter =1;
+    private static int enrollmentIdCounter = 1;
 
-    public static int getStudentId(){
-        return studentCounter+1;
+    //Next Student ID
+    public static int getStudentIdCounter(){
+        return studentIdCounter++;
     }
 
-    public static int getCourseId(){
-        return courseCounter+1;
+    //Next Course ID
+    public static int getNextCourseId(){
+        return courseIdCounter++;
+    }
+
+    //Next Enrollement ID
+    public static int getEnrollmentIdCounter(){
+        return enrollmentIdCounter++;
     }
 }

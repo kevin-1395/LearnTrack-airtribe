@@ -7,16 +7,15 @@ import java.util.ArrayList;
 
 public class studentService {
 
-    private ArrayList<Student> students = new ArrayList<>();
+    private static ArrayList<Student> students = new ArrayList<>();
 
     //add student
-    public void add_student(Student s){
+    public static void add_student(Student s){
         students.add(s);
-        System.out.println("Student added successfully");
     }
 
     //Search Student by ID
-    public Student findStudentById(int id) throws EntityNotFoundException {
+    public static Student findStudentById(int id) throws EntityNotFoundException {
         for (Student s : students) {
             if (s.getId() == id) {
                 return s;
@@ -26,20 +25,20 @@ public class studentService {
     }
 
     //deactivate student
-    public void remove_student(int id) throws EntityNotFoundException{
+    public static void remove_student(int id) throws EntityNotFoundException{
         Student s = findStudentById(id);
         s.setActive(false);
     }
 
     //update student email
-    public void update_student(int id, String email)throws EntityNotFoundException{
+    public static void update_student(int id, String email)throws EntityNotFoundException{
         Student s = findStudentById(id);
         s.setEmail(email);
         System.out.println("Email Address Updated!");
     }
 
     // list all students
-    public ArrayList<Student> listStudent(){
+    public static ArrayList<Student> listStudent(){
         return students;
     }
 

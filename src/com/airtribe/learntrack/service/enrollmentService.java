@@ -30,6 +30,20 @@ public class enrollmentService {
         throw new EntityNotFoundException("Enrollement ID"+id+"was not found");
     }
 
+    // Get all enrollments for a student
+    public ArrayList<Enrollment> getEnrollmentsByStudentId(int studentId) {
+
+        ArrayList<Enrollment> studentEnrollments =
+                new ArrayList<>();
+        for (Enrollment e : enrollments) {
+
+            if (e.getStudentId() == studentId) {
+                studentEnrollments.add(e);
+            }
+        }
+        return studentEnrollments;
+    }
+
     public void completeEnrollment(int id)throws EntityNotFoundException{
         Enrollment e = findEnrollById(id);
         e.setStatus("Completed");
